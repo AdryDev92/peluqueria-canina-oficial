@@ -25,8 +25,6 @@ class CreateTablePerros extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-
-
         });
 
     }
