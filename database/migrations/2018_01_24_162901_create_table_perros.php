@@ -27,6 +27,8 @@ class CreateTablePerros extends Migration
 
         });
 
+
+
     }
 
     /**
