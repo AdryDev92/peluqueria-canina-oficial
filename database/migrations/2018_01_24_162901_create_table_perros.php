@@ -26,6 +26,7 @@ class CreateTablePerros extends Migration
             $table->timestamps();
 
 
+
         });
 
     }
