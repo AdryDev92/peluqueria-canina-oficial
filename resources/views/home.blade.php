@@ -33,7 +33,7 @@
             </div>
         </div>
     @empty
-        <p>No hay perros registrados</p>
+        <p class="text-center">No hay perros registrados</p>
     @endforelse
 
     <div class="text-center">
