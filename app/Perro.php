@@ -5,7 +5,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Perro extends Model
 {
-  protected $fillable = [
+    protected $table = 'create_table_perros';
+
+    protected $fillable = [
       'name','race','weight','cut','notes','color','image'
   ];
 

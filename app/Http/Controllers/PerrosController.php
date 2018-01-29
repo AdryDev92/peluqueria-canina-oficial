@@ -7,28 +7,31 @@
  */
 
 namespace App\Http\Controllers;
+
 use App\Http\Requests\CreatePerroRequest;
 use App\Perro;
 
 class PerrosController
 {
-    public function show(Perro $perros){
-        return view('perros.show', [
-            'perros' => $perros
-        ]);
+
+
+    public function show(Perro $perros)
+    {
+        return view('perros.show',
+            [
+                'perros' => $perros
+            ]);
     }
 
     public function create()
     {
-        return view('perros.create');
+        return view('perros.add');
     }
 
-    public function store(CreatePerroRequest $request){
-        Perro::create([
-            'content'   => $request->input('content'),
 
-        ]);
+    public function store()
+    {
 
-        return redirect('/');
+
     }
 }
