@@ -20,18 +20,37 @@
         {{ $perros->links() }}
     </div>
 
-    @forelse($perros as $perro)
-        <div class="row perro">
-            <div class="col-md-12">
-                <p class="perro-name">{{ $perro['name'] }}</p>
-                <p>{{ $perro['race'] }}</p>
-                <p>{{$perro['weight'] }}</p>
-                <p>{{$perro['cut'] }}</p>
-                <p>{{$perro['notes'] }}</p>
-                <p>{{$perro['color'] }}</p>
-                <p>{{$perro['image'] }}</p>
-            </div>
-        </div>
+
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Peso</th>
+                    <th>Tipo de corte</th>
+                    <th>Color</th>
+                    <th>Notas</th>
+                </tr>
+            </thead>
+            <tbody>
+            @forelse($perros as $perro)
+
+                <tr>
+                    <td>{{$perro['id']}}</td>
+                    <td>
+                        <a href="/perro/{{$perro['id']}}"><img src="{{$perro['image']}}" alt="imagen de {{$perro['name']}}"></a></td>
+                    <td>{{$perro['name'] }}</td>
+                    <td>{{$perro['race'] }}</td>
+                    <td>{{$perro['weight'] }}</td>
+                    <td>{{$perro['cut'] }}</td>
+                    <td>{{$perro['color'] }}</td>
+                    <td>{{$perro['notes'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
     @empty
         <p class="text-center">No hay perros registrados</p>
     @endforelse

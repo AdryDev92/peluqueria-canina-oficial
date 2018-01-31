@@ -18,38 +18,87 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="nameInput">Nombre</label>
-                    <input type="text" placeholder="Nombre" class="form-control">
+                    <input type="text" placeholder="Nombre" id="nameInput" name="name" class="form-control">
+                    @if($errors->has('name'))
+                        @foreach($errors->get('name') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
 
                 <div class="form-group col-md-4">
                     <label for="raceInput">Raza</label>
-                    <input type="text" placeholder="Raza" class="form-control">
+                    <input type="text" placeholder="Raza" id="raceInput" name="race" class="form-control">
+                    @if($errors->has('race'))
+                        @foreach($errors->get('race') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="weightInput">Peso</label>
-                    <input type="text" placeholder="Peso" class="form-control">
+                    <label for="weightInput">Peso (kg)</label>
+                    <input type="text" placeholder="Peso" id="weightInput" name="weight" class="form-control">
+                    @if($errors->has('weight'))
+                        @foreach($errors->get('weight') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="ImageInput">Imagen</label>
-                    <input type="text" placeholder="Imagen" class="form-control">
+                    <input type="text" placeholder="Imagen" id="ImageInput" name="image" class="form-control">
+                    @if($errors->has('image'))
+                        @foreach($errors->get('image') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="ColorInput">Color</label>
-                    <input type="text" placeholder="Color" class="form-control">
+                    <input type="text" placeholder="Color" id="ColorInput" name="color" class="form-control">
+                    @if($errors->has('color'))
+                        @foreach($errors->get('color') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <label for="CutType">Tipo de corte</label>
-                <input type="text" placeholder="Tipo de corte" class="form-control">
+                <input type="text" placeholder="Tipo de corte" id="CutType" name="cut" class="form-control">
+                @if($errors->has('cut'))
+                    @foreach($errors->get('cut') as $message)
+                        <div class="alert alert-danger" role="alert">
+                            {{ $message }}
+                        </div>
+                    @endforeach
+                @endif
             </div>
 
             <div class="form-group col-md-12">
-                <textarea name="notes" id="notes" cols="40" rows="10"
+                <textarea name="notes" id="notes" cols="41" rows="10"
                           placeholder="Datos adicionales como alergias, problemas físicos, etc..."></textarea>
+                @if($errors->has('notes'))
+                    @foreach($errors->get('notes') as $message)
+                        <div class="alert alert-danger" role="alert">
+                            {{ $message }}
+                        </div>
+                    @endforeach
+                @endif
             </div>
 
             <input type="submit" class="btn btn-primary">

@@ -15,6 +15,10 @@ class PerrosController
 {
 
 
+    /**
+     * @param Perro $perros
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show(Perro $perros)
     {
         return view('perros.show',
@@ -23,15 +27,33 @@ class PerrosController
             ]);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
         return view('perros.add');
     }
 
 
-    public function store()
-    {
+    /**
+     * @param CreatePerroRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function store(CreatePerroRequest $request){
 
+        $user = $request->user();
 
+        Perro::create([
+            'name'   => $request->input('name'),
+            'race'    => $request->input('race'),
+            'weight'    => $request->input('weight'),
+            'image'     => $request->input('image'),
+            'color'     => $request->input('color'),
+            'cut'     => $request->input('cut'),
+            'notes'     => $request->input('notes')
+        ]);
+
+        return redirect('/');
     }
 }
