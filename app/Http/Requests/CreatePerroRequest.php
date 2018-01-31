@@ -34,6 +34,9 @@ class CreatePerroRequest extends FormRequest
             'image' => [
                 'required'
             ],
+            'sex' => [
+              'required'
+            ],
             'color' => [
                 'required', 'max: 20'
             ],

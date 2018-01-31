@@ -49,6 +49,7 @@ class PerrosController
             'race'    => $request->input('race'),
             'weight'    => $request->input('weight'),
             'image'     => $request->input('image'),
+            'sex'       => $request->select('sex'),
             'color'     => $request->input('color'),
             'cut'     => $request->input('cut'),
             'notes'     => $request->input('notes')

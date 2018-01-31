@@ -19,9 +19,14 @@ class CreateTablePerros extends Migration
             $table->string('race');
             $table->decimal('weight');
             $table->string('cut');
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->string('color');
-            $table->string('image');
+            $table->string('image')->nullable();
+            $table->date('born_date');
+            $table->enum('sex',[
+                'macho',
+                'hembra'
+            ]);
             $table->rememberToken();
             $table->timestamps();
 

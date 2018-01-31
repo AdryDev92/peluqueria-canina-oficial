@@ -77,6 +77,33 @@
                     @endif
                 </div>
             </div>
+
+            <div class="form-row">
+                <div class="col-lg-6">
+                    <label for="sex">Seleccione sexo</label>
+                    <select name="sex" id="sex">
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+                    </select>
+                    @if($errors->has('sex'))
+                        @foreach($errors->get('sex') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+
+                <div class="form-check-group col-md-6">
+                    <label for="transport">Transporte</label>
+                    <input type="radio" id="transport"> Sí
+                    <input type="radio" id="transport"> No
+
+                </div>
+            </div>
+
+            <span class="col-md-12"></span>
+
             <div class="form-group col-md-12">
                 <label for="CutType">Tipo de corte</label>
                 <input type="text" placeholder="Tipo de corte" id="CutType" name="cut" class="form-control">

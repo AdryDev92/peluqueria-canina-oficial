@@ -40,20 +40,21 @@
                 <tr>
                     <td>{{$perro['id']}}</td>
                     <td>
-                        <a href="/perro/{{$perro['id']}}"><img src="{{$perro['image']}}" alt="imagen de {{$perro['name']}}"></a></td>
+                        <a href="/perro/{{$perro['name']}}"><img src="{{$perro['image']}}" alt="imagen de {{$perro['name']}}"></a></td>
                     <td>{{$perro['name'] }}</td>
                     <td>{{$perro['race'] }}</td>
-                    <td>{{$perro['weight'] }}</td>
+                    <td>{{$perro['weight'] }} kg</td>
                     <td>{{$perro['cut'] }}</td>
                     <td>{{$perro['color'] }}</td>
                     <td>{{$perro['notes'] }}</td>
                 </tr>
-            </tbody>
-        </table>
+
 
     @empty
         <p class="text-center">No hay perros registrados</p>
     @endforelse
+            </tbody>
+        </table>
 
     <div class="text-center">
         {{ $perros->links('pagination::bootstrap-4') }}
