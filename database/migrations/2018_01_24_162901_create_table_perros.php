@@ -17,16 +17,14 @@ class CreateTablePerros extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('race');
-            $table->decimal('weight');
+            $table->decimal('weight',2,2);
             $table->string('cut');
             $table->text('notes')->nullable();
             $table->string('color');
             $table->string('image')->nullable();
             $table->date('born_date');
-            $table->enum('sex',[
-                'macho',
-                'hembra'
-            ]);
+            $table->enum('sex',['macho', 'hembra']);
+            $table->enum('transport',['Si','No']);
             $table->rememberToken();
             $table->timestamps();
 

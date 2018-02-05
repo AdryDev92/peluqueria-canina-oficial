@@ -23,7 +23,7 @@ class CreatePerroRequest extends FormRequest
     {
         return [
             'name' => [
-                'required', 'max: 80'
+                'required', 'max: 80', 'min: 3'
             ],
             'race' => [
                 'required', 'max: 80'
@@ -31,19 +31,18 @@ class CreatePerroRequest extends FormRequest
             'weight' => [
                 'required', 'max: 10'
             ],
-            'image' => [
-                'required'
+            'born_date' => [
+              'required'
             ],
             'sex' => [
-              'required'
+             'required'
             ],
             'color' => [
                 'required', 'max: 20'
             ],
             'cut' => [
                 'required', 'max: 100'
-            ],
-
+            ]
 
         ];
     }
@@ -51,17 +50,19 @@ class CreatePerroRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Información incorrecta',
-            'name.max' => 'Número de caracteres erróneo',
+            'name.required' => 'Por favor, introduce un nombre válido',
+            'name.max' => 'El número máximo de caracteres es 80',
+            'name.min' => 'El número minimo de caracteres es 3',
             'race.required' => 'Información incorrecta',
             'race.max' => 'Número de caracteres erróneo',
             'weight.required' => 'Información incorrecta',
             'weight.max' => 'Número de caracteres erróneo',
-            'image.required' => 'Imagen requerida',
             'color.required' => 'Información requerida',
             'color.max' => 'Número de caracteres erróneo',
             'cut.required' => 'Información incorrecta',
-            'cut.max' => 'Número de caracteres erróneo'
+            'cut.max' => 'Número de caracteres erróneo',
+            'born_date.required' => 'Por favor introduce fecha de nacimiento',
+            'sex.required' => 'Por favor, introduce selecciona un sexo'
         ];
     }
 

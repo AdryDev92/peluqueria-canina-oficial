@@ -42,17 +42,18 @@ class PerrosController
      */
     public function store(CreatePerroRequest $request){
 
-        $user = $request->user();
+        $perro = $request->rules();
 
         Perro::create([
             'name'   => $request->input('name'),
             'race'    => $request->input('race'),
             'weight'    => $request->input('weight'),
             'image'     => $request->input('image'),
-            'sex'       => $request->select('sex'),
             'color'     => $request->input('color'),
             'cut'     => $request->input('cut'),
-            'notes'     => $request->input('notes')
+            'notes'     => $request->input('notes'),
+            'sex'       => $request->get('sex'),
+            'born_date' => $request->get('born_date')
         ]);
 
         return redirect('/');

@@ -14,7 +14,8 @@
 Route::get('/', 'PagesController@home');
 Route::get('/perros/add', 'PerrosController@create');
 Route::get('/perros/{perro}', 'PerrosController@show');
-Route::post('/perros/add', 'PerrosController@store');
+Route::post('/perros/add', 'PerrosController@store')->name('dog.add');
+Route::post('auth/register','RegisterController@create');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

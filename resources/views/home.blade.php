@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <form action="/perros/create" method="post">
+        <form action="/perros/add" method="post">
             {{ csrf_field() }}
             <div class="form-group @if( $errors->has('content'))has-error @endif">
                 <input type="text" class="form-control" id="content" name="content">

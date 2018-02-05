@@ -1,17 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: adry
- * Date: 25/1/18
- * Time: 1:32
- */
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
-class HomeController
+class HomeController extends Controller
 {
-
     /**
      * Create a new controller instance.
      *
@@ -31,5 +25,4 @@ class HomeController
     {
         return view('home');
     }
-
 }

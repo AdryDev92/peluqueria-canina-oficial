@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form action="{{ url('/') }}/perros/add" method="post">
+    <form action="/perros/add" method="post">
         {{ csrf_field() }}
         <div class="form-group @if( $errors->has('content'))has-error @endif">
             <input type="text" class="form-control" id="content" name="content" placeholder="Registra un nuevo perro">
@@ -16,41 +16,41 @@
 
         <div class="container">
             <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="nameInput">Nombre</label>
-                    <input type="text" placeholder="Nombre" id="nameInput" name="name" class="form-control">
-                    @if($errors->has('name'))
-                        @foreach($errors->get('name') as $message)
-                            <div class="alert alert-danger" role="alert">
-                                {{ $message }}
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
+                    <div class="form-group col-md-4">
+                        <label for="nameInput">Nombre</label>
+                        <input type="text" placeholder="Nombre" id="nameInput" name="name" class="form-control">
+                        @if($errors->has('name'))
+                            @foreach($errors->get('name') as $message)
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
 
-                <div class="form-group col-md-4">
-                    <label for="raceInput">Raza</label>
-                    <input type="text" placeholder="Raza" id="raceInput" name="race" class="form-control">
-                    @if($errors->has('race'))
-                        @foreach($errors->get('race') as $message)
-                            <div class="alert alert-danger" role="alert">
-                                {{ $message }}
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
+                    <div class="form-group col-md-4">
+                        <label for="raceInput">Raza</label>
+                        <input type="text" placeholder="Raza" id="raceInput" name="race" class="form-control">
+                        @if($errors->has('race'))
+                            @foreach($errors->get('race') as $message)
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
 
-                <div class="form-group col-md-4">
-                    <label for="weightInput">Peso (kg)</label>
-                    <input type="text" placeholder="Peso" id="weightInput" name="weight" class="form-control">
-                    @if($errors->has('weight'))
-                        @foreach($errors->get('weight') as $message)
-                            <div class="alert alert-danger" role="alert">
-                                {{ $message }}
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
+                    <div class="form-group col-md-4">
+                        <label for="weightInput">Peso (kg)</label>
+                        <input type="text" placeholder="Peso" id="weightInput" name="weight" class="form-control">
+                        @if($errors->has('weight'))
+                            @foreach($errors->get('weight') as $message)
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -78,8 +78,21 @@
                 </div>
             </div>
 
+
             <div class="form-row">
-                <div class="col-lg-6">
+                <div class="col-md-4">
+                    <label for="bornDate">Seleccione fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="bornDate" name="bornDate">
+                    @if($errors->has('born_date'))
+                        @foreach($errors->get('born_date') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+
+                <div class="col-md-4">
                     <label for="sex">Seleccione sexo</label>
                     <select name="sex" id="sex">
                         <option value="Macho">Macho</option>
@@ -94,15 +107,19 @@
                     @endif
                 </div>
 
-                <div class="form-check-group col-md-6">
+                <div class="form-check-group col-md-4">
                     <label for="transport">Transporte</label>
-                    <input type="radio" id="transport"> Sí
-                    <input type="radio" id="transport"> No
-
+                    <input type="radio" id="transport" name="transport"> Si
+                    <input type="radio" id="transport" name="transport"> No
+                    @if($errors->has('transport'))
+                        @foreach($errors->get('transport') as $message)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
-
-            <span class="col-md-12"></span>
 
             <div class="form-group col-md-12">
                 <label for="CutType">Tipo de corte</label>
