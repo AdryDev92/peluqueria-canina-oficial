@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Peluqueria canina') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Peluqueria canina') }}
+                {{ config('app.name', 'Laravel') }}
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -29,6 +29,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
 
+                    @auth
                     @if (Auth::guest())
                         <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
                         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
@@ -51,6 +52,7 @@
                             </div>
                         </li>
                     @endif
+                    @endauth
                 </ul>
             </div>
 
