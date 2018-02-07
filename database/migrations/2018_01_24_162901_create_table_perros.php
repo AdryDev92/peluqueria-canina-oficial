@@ -13,8 +13,10 @@ class CreateTablePerros extends Migration
      */
     public function up()
     {
-        Schema::create('create_table_perros', function (Blueprint $table) {
+        Schema::create('perros', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
             $table->string('name');
             $table->string('race');
             $table->decimal('weight',2,2);
@@ -28,7 +30,10 @@ class CreateTablePerros extends Migration
             $table->rememberToken();
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
         });
+
+
 
     }
 
@@ -39,6 +44,6 @@ class CreateTablePerros extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('create_table_perros');
+        Schema::dropIfExists('perros');
     }
 }

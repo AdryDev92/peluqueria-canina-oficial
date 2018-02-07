@@ -53,7 +53,8 @@ class PerrosController
             'cut'     => $request->input('cut'),
             'notes'     => $request->input('notes'),
             'sex'       => $request->get('sex'),
-            'born_date' => $request->get('born_date')
+            'born_date' => $request->get('born_date'),
+            'transport' => $request->get('transport')
         ]);
 
         return redirect('/');
