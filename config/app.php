@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | Applifcation Name
     |--------------------------------------------------------------------------
     |
     | This value is the name of your application. This value is used when the
@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Peluquería Canina'),
 
     /*
     |--------------------------------------------------------------------------

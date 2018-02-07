@@ -19,4 +19,24 @@
         </div>
     </div>
 </div>
+@auth
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 offset-md-3">
+
+            <div class="card pb-4 pt-4">
+                <div class="card-body text-center">Pedir cita</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card pb-4 pt-4">
+                <div class="card-body text-center">
+                    Recibos
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    @endauth
 @endsection
