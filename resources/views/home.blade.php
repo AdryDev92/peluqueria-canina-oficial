@@ -24,8 +24,8 @@
     <div class="row">
         <div class="col-md-3 offset-md-3">
 
-            <div class="card pb-4 pt-4">
-                <div class="card-body text-center">Pedir cita</div>
+            <div class="card pb-4 pt-4 pr-5 pl-5">
+                <a href="/perros/add"><div class="card-body text-center">Pedir cita</div></a>
             </div>
         </div>
         <div class="col-md-3">

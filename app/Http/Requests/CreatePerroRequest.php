@@ -23,11 +23,11 @@ class CreatePerroRequest extends FormRequest
                 'required', 'max: 80'
             ],
             'weight' => [
-                'required', 'max: 10'
+                'required'
             ],
-            'born_date' => [
+            /*'born_date' => [
               'required'
-            ],
+            ],*/
             'sex' => [
              'required'
             ],
@@ -50,12 +50,12 @@ class CreatePerroRequest extends FormRequest
             'race.required' => 'Información incorrecta',
             'race.max' => 'Número de caracteres erróneo',
             'weight.required' => 'Información incorrecta',
-            'weight.max' => 'Número de caracteres erróneo',
+//            'weight.max' => 'Número de caracteres erróneo',
             'color.required' => 'Información requerida',
             'color.max' => 'Número de caracteres erróneo',
             'cut.required' => 'Información incorrecta',
             'cut.max' => 'Número de caracteres erróneo',
-            'born_date.required' => 'Por favor introduce fecha de nacimiento',
+//            'born_date.required' => 'Por favor introduce fecha de nacimiento',
             'sex.required' => 'Por favor, introduce selecciona un sexo'
         ];
     }

@@ -16,7 +16,6 @@ Route::get('/perros/add', 'PerrosController@create');
 Route::get('/perros/{perro}', 'PerrosController@show');
 Route::post('/perros/add', 'PerrosController@store')->name('dog.add');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('profile','UserController@profile');
 
 Auth::routes();
-
-

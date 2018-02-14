@@ -19,7 +19,7 @@ class CreateTablePerros extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('name');
             $table->string('race');
-            $table->decimal('weight',2,2);
+            $table->string('weight');
             $table->string('cut');
             $table->text('notes')->nullable();
             $table->string('color');
