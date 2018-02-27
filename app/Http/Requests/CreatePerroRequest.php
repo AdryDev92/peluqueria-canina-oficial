@@ -20,7 +20,7 @@ class CreatePerroRequest extends FormRequest
                 'required', 'max: 80', 'min: 3'
             ],
             'race' => [
-                'required', 'max: 80'
+                'required', 'max: 30'
             ],
             'weight' => [
                 'required'
@@ -36,6 +36,9 @@ class CreatePerroRequest extends FormRequest
             ],
             'cut' => [
                 'required', 'max: 100'
+            ],
+            'transport' => [
+                'required'
             ]
 
         ];
@@ -47,8 +50,8 @@ class CreatePerroRequest extends FormRequest
             'name.required' => 'Por favor, introduce un nombre válido',
             'name.max' => 'El número máximo de caracteres es 80',
             'name.min' => 'El número minimo de caracteres es 3',
-            'race.required' => 'Información incorrecta',
-            'race.max' => 'Número de caracteres erróneo',
+            'race.required' => 'Por favor, introduce una raza válida',
+            'race.max' => 'El número máximo de caracteres es 30',
             'weight.required' => 'Información incorrecta',
 //            'weight.max' => 'Número de caracteres erróneo',
             'color.required' => 'Información requerida',
@@ -56,7 +59,8 @@ class CreatePerroRequest extends FormRequest
             'cut.required' => 'Información incorrecta',
             'cut.max' => 'Número de caracteres erróneo',
 //            'born_date.required' => 'Por favor introduce fecha de nacimiento',
-            'sex.required' => 'Por favor, introduce selecciona un sexo'
+            'sex.required' => 'Por favor, introduce selecciona un sexo',
+            'transport.required' => 'Por favor, selecciona si necesita transporte o no'
         ];
     }
 

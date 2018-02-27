@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePerroRequest;
 use App\Perro;
+use Illuminate\Support\Facades\Auth;
 
 class PerrosController
 {
@@ -43,9 +44,12 @@ class PerrosController
     public function store(CreatePerroRequest $request){
 
         $perro = $request->rules();
+        //dd($request->all());
+        $user = $request->user();
 
         Perro::create([
             'name'   => $request->input('name'),
+            'user_id' => $user->id,
             'race'    => $request->input('race'),
             'weight'    => $request->input('weight'),
             'image'     => $request->input('image'),
@@ -54,7 +58,7 @@ class PerrosController
             'notes'     => $request->input('notes'),
             'sex'       => $request->get('sex'),
             'born_date' => $request->input('born_date'),
-            'transport' => $request->get('transport')
+            'transport' => $request->input('transport')
         ]);
 
         return redirect('/');

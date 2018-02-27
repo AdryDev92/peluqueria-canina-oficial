@@ -1,6 +1,7 @@
 <?php
 
-use Faker\Generator as Faker;
+use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
 
 /*
 |--------------------------------------------------------------------------

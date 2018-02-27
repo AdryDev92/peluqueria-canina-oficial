@@ -1,42 +1,31 @@
 @extends('layouts.app')
 
+
 @section('content')
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-8 offset-md-2">
-            <div class="card">
-                <div class="card-header text-center"><strong>Página de inicio</strong></div>
+    @auth
+        <div class="container row">
+            <div class="col-md-6">
+                <div class="ml-2 mt-2">
 
-                <div class="card-body text-center">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
+                    {{--<div class="card" style="width: 20rem;">
+                        <img class="card-img-top" src="https://comps.canstockphoto.es/logo-perro-dibujo_csp41564190.jpg"
+                             alt="img">
+                        <div class="card-block">
+                            <div class="card-header">
+                                <h3 class>Menú</h3>
+                                <p>Utilice éste menú para moverse entre las distintas opciones disponibles</p>
+                            </div>
                         </div>
-                    @endif
-                    Bienvenid@ al portal de tu peluquería canina
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="/perros/add">Pedir cita</a></li>
+                            <li class="list-group-item"><a href="">Servicios</a></li>
+                            <li class="list-group-item"><a href="">Configuración</a></li>
+                            <li class="list-group-item"><a href="">Cerrar sesión</a></li>
+                        </ul>
+                    </div>--}}
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-@auth
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 offset-md-3">
 
-            <div class="card pb-4 pt-4 pr-5 pl-5">
-                <a href="/perros/add"><div class="card-body text-center">Pedir cita</div></a>
-            </div>
         </div>
-        <div class="col-md-3">
-            <div class="card pb-4 pt-4">
-                <div class="card-body text-center">
-                    Recibos
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
     @endauth
 @endsection

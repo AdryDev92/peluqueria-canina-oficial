@@ -53,7 +53,7 @@
                     </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="ImageInput">Imagen</label>
                     <input type="text" placeholder="Imagen" id="ImageInput" name="image" class="form-control">
                     @if($errors->has('image'))
@@ -65,7 +65,7 @@
                     @endif
                 </div>
 
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="ColorInput">Color</label>
                     <input type="text" placeholder="Color" id="ColorInput" name="color" class="form-control">
                     @if($errors->has('color'))
@@ -76,13 +76,10 @@
                         @endforeach
                     @endif
                 </div>
-            </div>
 
-
-            <div class="form-row">
                 <div class="col-md-4">
                     <label for="bornDate">Seleccione fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="bornDate" name="bornDate">
+                    <input type="date" class="form-control" id="born_date" name="born_date">
                     @if($errors->has('born_date'))
                         @foreach($errors->get('born_date') as $message)
                             <div class="alert alert-danger" role="alert">
@@ -91,8 +88,10 @@
                         @endforeach
                     @endif
                 </div>
+            </div>
 
-                <div class="col-md-4">
+            <div class="form-row mb-3 mt-3">
+                <div class="col-md-6">
                     <label for="sex">Seleccione sexo</label>
                     <select name="sex" id="sex">
                         <option value="Macho">Macho</option>
@@ -107,10 +106,11 @@
                     @endif
                 </div>
 
-                <div class="form-check-group col-md-4">
+                <div class="col-md-6">
                     <label for="transport">Transporte</label>
                     <input type="radio" id="transport" name="transport"> Si
                     <input type="radio" id="transport" name="transport"> No
+                    <subhead>Seleccione si el perro necesita recogida o no</subhead>
                     @if($errors->has('transport'))
                         @foreach($errors->get('transport') as $message)
                             <div class="alert alert-danger" role="alert">
@@ -121,7 +121,8 @@
                 </div>
             </div>
 
-            <div class="form-group col-md-12">
+
+            <div class="form-group">
                 <label for="CutType">Tipo de corte</label>
                 <input type="text" placeholder="Tipo de corte" id="CutType" name="cut" class="form-control">
                 @if($errors->has('cut'))
@@ -133,7 +134,7 @@
                 @endif
             </div>
 
-            <div class="form-group col-md-12">
+            <div class="form-group">
                 <textarea name="notes" id="notes" cols="41" rows="10"
                           placeholder="Datos adicionales como alergias, problemas físicos, etc..."></textarea>
                 @if($errors->has('notes'))

@@ -37,11 +37,14 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
                                data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
+                               aria-haspopup="true" aria-expanded="false"
+                               style="position:relative; padding-left: 120px; padding-top: 20px">
+                                <img src="/images/{{ Auth::user()->avatar }}"
+                                     style="width: 40px; height: 40px; position: absolute; top: 10px; left: 70px; border-radius: 50%">
                                 {{ Auth::user()->username }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a href="{{url('/profile')}}" class="dropdown-item">Perfil</a>
+                                <a href="{{url('profile')}}" class="dropdown-item">Perfil</a>
                                 <a href="{{ route('logout') }}" class="dropdown-item"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     Cerrar sesión
@@ -60,9 +63,9 @@
 
         </div>
     </nav>
-
     @yield('content')
 </div>
+
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
