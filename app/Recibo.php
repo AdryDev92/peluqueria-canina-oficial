@@ -17,4 +17,5 @@ class Recibo extends Model
         'servicios'
     ];
 
+
 }
