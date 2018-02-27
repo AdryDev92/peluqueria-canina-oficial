@@ -7,6 +7,7 @@ use App\User;
 
 class Citas extends Model
 {
+
     protected $table = 'citas';
     protected $fillable = [
         'id',
