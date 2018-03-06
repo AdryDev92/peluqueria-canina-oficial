@@ -17,7 +17,7 @@
         <div class="container">
             <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="nameInput">Nombre</label>
+                        <label for="nameInput" class="glyphicon glyphicon-user">Nombre</label>
                         <input type="text" placeholder="Nombre" id="nameInput" name="name" class="form-control">
                         @if($errors->has('name'))
                             @foreach($errors->get('name') as $message)

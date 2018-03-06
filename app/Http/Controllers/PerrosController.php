@@ -44,7 +44,6 @@ class PerrosController
     public function store(CreatePerroRequest $request){
 
         $perro = $request->rules();
-        //dd($request->all());
         $user = $request->user();
 
         Perro::create([

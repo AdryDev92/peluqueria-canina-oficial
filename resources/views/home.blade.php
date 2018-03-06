@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <div class="ml-2 mt-2">
 
-                    {{--<div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 20rem;">
                         <img class="card-img-top" src="https://comps.canstockphoto.es/logo-perro-dibujo_csp41564190.jpg"
                              alt="img">
                         <div class="card-block">
@@ -22,7 +22,7 @@
                             <li class="list-group-item"><a href="">Configuración</a></li>
                             <li class="list-group-item"><a href="">Cerrar sesión</a></li>
                         </ul>
-                    </div>--}}
+                    </div>
                 </div>
             </div>
 
