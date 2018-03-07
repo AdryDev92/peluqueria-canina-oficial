@@ -8,7 +8,14 @@ use App\User;
 class Citas extends Model
 {
 
+    /**
+     * @var string
+     */
     protected $table = 'citas';
+
+    /**
+     * @var array
+     */
     protected $fillable = [
         'id',
         'id_perro',

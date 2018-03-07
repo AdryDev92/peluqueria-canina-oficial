@@ -3,24 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Citas;
 
-class Recibo extends Model
+class Comentarios extends Model
 {
 
     /**
      * @var string
      */
-    protected $table = 'recibo';
+    protected $table = 'comments';
 
     /**
      * @var array
      */
     protected $fillable = [
-        'id',
-        'id_cita',
-        'coste',
-        'total',
-        'servicios'
+        'content',
+        'user',
+        'coment_date'
     ];
 }

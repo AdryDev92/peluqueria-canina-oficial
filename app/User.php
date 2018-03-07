@@ -16,7 +16,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','adress','password','username'
+        'name',
+        'email',
+        'adress',
+        'password',
+        'username'
     ];
 
     /**
@@ -27,4 +31,38 @@ class User extends Authenticatable
     protected $hidden = [
         'remember_token'
     ];
+
+
+    /**
+     * Indica los roles que puede tener un usuario
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function roles(){
+        return $this->belongsToMany(User::class);
+    }
+
+    /**
+     * Un usuario puede tener varios perros
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function dogs(){
+        return $this->hasMany(Perro::class);
+    }
+
+    /**
+     * Un usuario puede tener varios perros
+     * @return \Illuminate\Database\Query\Builder|static
+     */
+    public function hasDog(){
+        if( count(User::class->hasMany(Perro::class)) ){
+            return $this->dogs();
+        }
+    }
+    /**
+     * Un usuario puede escribir comentarios
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function comment(){
+        return $this->hasOne(Comentarios::class);
+    }
 }

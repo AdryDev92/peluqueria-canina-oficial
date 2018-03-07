@@ -15,7 +15,9 @@ class PerrosControllerTest extends TestCase
      */
     public function testExample()
     {
-        $this->get('/');
-        $this->assertStatus(200);
+        $response = $this->call('get','/perros/add');
+        $response->assertStatus(200);
+        $response->assertSuccessful();
     }
+
 }
