@@ -3,7 +3,7 @@ Course's final project powered by laravel about a dog hairdesser with DB totally
 
 ---
 ## Status
-![status](https://img.shields.io/badge/status-WIP-green.svg?colorB=00C106) ![version](https://img.shields.io/badge/version-0.1.0-green.svg?colorB=00C106) ![framework](https://img.shields.io/badge/framework-laravel-blue.svg?) ![commits](https://img.shields.io/badge/commits-42-blue.svg?)
+![status](https://img.shields.io/badge/status-WIP-green.svg?colorB=00C106) ![version](https://img.shields.io/badge/version-0.1.0-green.svg?colorB=00C106) ![framework](https://img.shields.io/badge/framework-laravel-blue.svg?) ![commits](https://img.shields.io/badge/commits-44-blue.svg?)
 ---
 
 ### Installation
@@ -15,6 +15,6 @@ Once done this, you must have installed vagrant and composer, and in the termina
 
 ---
 
-Next, go to the /Homestead folder, and execute: `vagrant up` to turn on the virtual machine.
+Next, go to the `/Homestead` folder, and execute: `vagrant up` to turn on the virtual machine.
 
 When you did this, you can access to the app through the next link: `peluqueria.test`
