@@ -17,7 +17,6 @@ class Citas extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
         'id_perro',
         'id_usuario',
         'fecha',

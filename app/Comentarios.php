@@ -18,6 +18,6 @@ class Comentarios extends Model
     protected $fillable = [
         'content',
         'user',
-        'coment_date'
+        'comment_date'
     ];
 }

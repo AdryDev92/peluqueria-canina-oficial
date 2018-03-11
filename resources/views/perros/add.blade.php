@@ -79,7 +79,7 @@
 
                 <div class="col-md-4">
                     <label for="bornDate">Seleccione fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="born_date" name="born_date">
+                    <input type="date" class="form-control" id="bornDate" name="born_date">
                     @if($errors->has('born_date'))
                         @foreach($errors->get('born_date') as $message)
                             <div class="alert alert-danger" role="alert">

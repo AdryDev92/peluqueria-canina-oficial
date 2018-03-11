@@ -13,7 +13,7 @@ $factory->define(\App\Perro::class, function (Faker $faker) {
         'color' => $faker->colorName,
         'cut' => $faker->realText(100),
         'notes' => $faker->realText(100),
-        'born_date' => $faker->date('d-m-Y',1),
+        'born_date' => $faker->date('d/m/Y',1),
         'transport' => $faker->boolean(50)
 
     ];

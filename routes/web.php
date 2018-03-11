@@ -11,13 +11,17 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('/perros/add', 'PerrosController@create');
-Route::get('/perros/{perro}', 'PerrosController@show');
-Route::post('/perros/add', 'PerrosController@store')->name('dog.add');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function(){
 
-Route::get('profile','UserController@profile');
-Route::post('profile','UserController@update_avatar');
+    Route::get('/perros/add', 'PerrosController@create');
+    Route::get('/perros/{perro}', 'PerrosController@show');
+    Route::post('/perros/add', 'PerrosController@store')->name('dog.add');
+    Route::get('profile','UserController@profile');
+    Route::post('profile','UserController@update_avatar');
+
+});
+
+Route::get('/', 'PagesController@home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
