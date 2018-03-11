@@ -9,6 +9,11 @@ Course's final project powered by laravel about a dog hairdesser with DB totally
 ### Installation
 At first, you need use change the `.env.example` to `.env` and fill with your database's data.
 
+---
 Once done this, you must have installed vagrant and composer, and in the terminal, execute the next command: `composer install`
+
+---
+
+Next, go to the /Homestead folder, and execute: `vagrant up` to turn on the virtual machine.
 
 When you did this, you can access to the app through the next link: `peluqueria.test`
