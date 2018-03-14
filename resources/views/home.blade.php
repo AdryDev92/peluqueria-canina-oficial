@@ -7,6 +7,7 @@
             <div class="col-md-6">
                 <div class="ml-2 mt-2">
 
+
                     <div class="card" style="width: 20rem;">
                         <img class="card-img-top" src="https://comps.canstockphoto.es/logo-perro-dibujo_csp41564190.jpg"
                              alt="img">
