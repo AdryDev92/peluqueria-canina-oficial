@@ -1491,6 +1491,7 @@
         afterRender: function(){}
     };
 
+
     $.fn[PLUGIN_NAME].Constructor = iziModal;
 
     return $.fn.iziModal;
